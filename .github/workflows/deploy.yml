@@ -49,7 +49,7 @@ jobs:
         uses: redhat-actions/podman-login@v1
         with:
           registry: quay.io
-          username: ${{ secrets.REDHAT_USERNAME }}
+          username: ${{ inputs.QUAY_USER }}
           password: ${{ secrets.REDHAT_PASSWORD }}
 
       - name: Log in to registry.redhat.io

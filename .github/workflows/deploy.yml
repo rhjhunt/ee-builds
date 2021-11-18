@@ -62,7 +62,7 @@ jobs:
 
       - name: Create ansible.cfg
         id: ansible-cfg
-        uses: rinnp/create-file-action@master
+        uses: finnp/create-file-action@master
         env:
           FILE_NAME: ${{ inputs.EE_FOLDER_NAME }}/ansible.cfg
           FILE_DATA: ${{ secrets.AUTOMATIONHUB_TOKEN }}

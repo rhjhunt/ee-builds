@@ -64,7 +64,7 @@ jobs:
         id: ansible-cfg
         working-directory: ${{ inputs.EE_FOLDER_NAME }}
         run: |
-          cat > ansible.cfg < EOF
+          cat > ansible.cfg << EOF
           [galaxy]
           server_list = automation_hub, release_galaxy
 

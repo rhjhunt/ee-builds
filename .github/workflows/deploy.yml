@@ -72,3 +72,6 @@ jobs:
         uses: redhat-actions/push-to-registry@v2
         with:
           tags: ${{ inputs.EE_FOLDER_NAME }}:${{ inputs.EE_IMAGE_TAG }}
+          registry: quay.io/${{ inputs.QUAY_USER }}
+          username: ${{ inputs.QUAY_USER }}
+          password: ${{ secrets.REDHAT_PASSWORD }}

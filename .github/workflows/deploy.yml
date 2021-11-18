@@ -70,3 +70,5 @@ jobs:
       - name: Push To quay.io
         id: push-to-quay
         uses: redhat-actions/push-to-registry@v2
+        with:
+          tags: ${{ inputs.EE_FOLDER_NAME }}:${{ inputs.EE_IMAGE_TAG }}

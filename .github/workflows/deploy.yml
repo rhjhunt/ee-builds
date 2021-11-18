@@ -76,7 +76,7 @@ jobs:
           [galaxy_server.release_galaxy]
           url=https://galaxy.ansible.com
           EOF
-
+          cat ansible.cfg
       - name: Build image
         id: build-image
         working-directory: ${{ inputs.EE_FOLDER_NAME }}

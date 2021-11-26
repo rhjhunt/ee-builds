@@ -67,6 +67,12 @@ jobs:
           FILE_NAME: ${{ inputs.EE_FOLDER_NAME }}/ansible.cfg
           FILE_DATA: ${{ secrets.AUTOMATIONHUB_TOKEN }}
       
+      - name: View ansible.cfg
+        id: view-config
+        working-directory: ${{ inputs.EE_FOLDER_NAME }}
+        run: |
+          cat ansible.cfg
+
       - name: Build image
         id: build-image
         working-directory: ${{ inputs.EE_FOLDER_NAME }}

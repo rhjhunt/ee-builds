@@ -62,16 +62,10 @@ jobs:
 
       - name: Create ansible.cfg
         id: ansible-cfg
-        uses: finnp/create-file-action@master
+        run: ./.github/scripts/decrypt_secret.sh
         env:
-          FILE_NAME: ${{ inputs.EE_FOLDER_NAME }}/ansible.cfg
-          FILE_DATA: ${{ secrets.AUTOMATIONHUB_TOKEN }}
-      
-      - name: View ansible.cfg
-        id: view-config
-        working-directory: ${{ inputs.EE_FOLDER_NAME }}
-        run: |
-          cat ansible.cfg
+          EE_FOLDER_NAME: ${{ inputs.EE_FOLDER_NAME }}
+          PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
       - name: Build image
         id: build-image

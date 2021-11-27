@@ -62,10 +62,13 @@ jobs:
 
       - name: Create ansible.cfg
         id: ansible-cfg
-        run: ./.github/scripts/decrypt_secret.sh
+        run: |
+          cat >> $EE_FOLDER_NAME/ansible.cfg << EOF
+          "$AUTOMATIONHUB_TOKEN"
+          EOF
         env:
           EE_FOLDER_NAME: ${{ inputs.EE_FOLDER_NAME }}
-          PASSPHRASE: ${{ secrets.PASSPHRASE }}
+          AUTOMATIONHUB_TOKEN: ${{ secrets.AUTOMATIONHUB_TOKEN }}
 
       - name: Build image
         id: build-image

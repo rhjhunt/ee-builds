@@ -1,5 +1,6 @@
 ---
 collections:
-  - ansible.tower
+  - name: ansible.tower
 
-  - awx.awx
+  - name: awx.awx
+    source: https://galaxy.ansible.com

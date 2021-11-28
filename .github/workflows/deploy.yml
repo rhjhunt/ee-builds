@@ -76,6 +76,7 @@ jobs:
           [galaxy_server.release_galaxy]
           url=https://galaxy.ansible.com
           EOF
+          cat ansible.cfg
         env:
           AUTOMATIONHUB_TOKEN: ${{ secrets.AUTOMATIONHUB_TOKEN }}
 

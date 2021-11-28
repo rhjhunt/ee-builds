@@ -28,4 +28,3 @@ jobs:
     secrets:
       REDHAT_USERNAME: ${{ secrets.REDHAT_USERNAME }}
       REDHAT_PASSWORD: ${{ secrets.REDHAT_PASSWORD }}
-      AUTOMATIONHUB_TOKEN: ${{ secrets.AUTOMATIONHUB_TOKEN }}

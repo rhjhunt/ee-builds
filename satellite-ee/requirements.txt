@@ -1,0 +1,5 @@
+ansible-core<2.12.0
+awxkit
+pyYAML
+requests
+rpm

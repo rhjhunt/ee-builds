@@ -1,3 +1,6 @@
 ---
 collections:
-  - ovirt.ovirt
+  - name: ovirt.ovirt
+    source: https://galaxy.ansible.com
+
+  - name: redhat.rhv

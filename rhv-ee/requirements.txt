@@ -1,5 +1,5 @@
 ovirt-engine-sdk-python>=4.2.4
-ansible-core==2.12.0
+ansible-core>=2.12.0
 ansible-pylibssh
 awxkit
 bcrypt
@@ -11,4 +11,3 @@ jsonschema
 PyYAML
 receptorctl
 requests
-

@@ -1,5 +1,7 @@
 ---
 collections:
+  - name: ansible.controller
+
   - name: ansible.tower
 
   - name: awx.awx

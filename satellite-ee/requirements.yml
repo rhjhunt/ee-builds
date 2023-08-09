@@ -1,8 +1,0 @@
----
-collections:
-  - name: redhat.satellite_operations
-
-  - name: redhat.satellite
-
-  - name: theforeman.foreman
-    source: https://galaxy.ansible.com

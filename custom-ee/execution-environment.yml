@@ -1,0 +1,34 @@
+---
+version: 3
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core>=2.15.0
+  ansible_runner:
+    package_pip: ansible-runner
+  galaxy:
+    collections:
+      - awx.awx
+      - ovirt.ovirt
+      - theforeman.foreman
+      - ansible.posix
+      - containers.podman
+      - community.crypto
+  python:
+    - awxkit
+    - bcrypt
+
+images:
+  base_image:
+    name: registry.redhat.io/ansible-automation-platform-24/ee-supported-rhel8:latest
+
+additional_build_files:
+  - dest: configs
+    src: files/ansible.cfg
+
+additional_build_steps:
+  prepend_galaxy:
+    - ADD _build/configs/ansible.cfg /etc/ansible/ansible.cfg
+
+options:
+  package_manager_path: /usr/bin/microdnf

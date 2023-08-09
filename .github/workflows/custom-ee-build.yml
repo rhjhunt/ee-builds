@@ -1,5 +1,5 @@
 # Workflow name
-name: Controller EE build
+name: Custom EE build
 
 # Controls when the workflow will run
 on:
@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - 'controller-ee/**'
+      - 'custom-ee/**'
 
   # Schedule workflow run at 00:00 on Sunday
   schedule:
@@ -22,7 +22,7 @@ jobs:
   call-deploy-workflow:
     uses:  rhjhunt/ee-builds/.github/workflows/deploy.yml@main
     with:
-      EE_FOLDER_NAME: 'controller-ee'
+      EE_FOLDER_NAME: 'custom-ee'
       EE_IMAGE_TAG: 'latest'
       QUAY_USER: 'rhjhunt'
     secrets:

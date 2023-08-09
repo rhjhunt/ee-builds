@@ -1,8 +1,0 @@
----
-collections:
-  - name: ansible.controller
-
-  - name: ansible.tower
-
-  - name: awx.awx
-    source: https://galaxy.ansible.com

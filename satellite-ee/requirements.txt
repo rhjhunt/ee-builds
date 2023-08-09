@@ -1,3 +1,0 @@
-awxkit
-pyYAML
-requests

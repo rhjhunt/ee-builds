@@ -64,7 +64,7 @@ jobs:
 
       - name: Create ansible.cfg
         id: ansible-cfg
-        working-directory: ${{ inputs.EE_FOLDER_NAME }}
+        working-directory: ${{ inputs.EE_FOLDER_NAME }}/files
         run: |
           cat > ansible.cfg << EOF
           [galaxy]

@@ -4,7 +4,7 @@ repos:
     rev: v1.32.0
     hooks:
       - id: yamllint
-        exclude: .gitlab/.*
+        exclude: .github/.*
         files: \.(yaml|yml)$
         types: [file, yaml]
         always_run: true
@@ -14,7 +14,7 @@ repos:
     rev: v0.12.0
     hooks:
       - id: markdownlint
-        exclude: .gitlab/.*
+        exclude: .github/.*
         types: [file, markdown]
         files: \.(md|rst)$
         always_run: true
